@@ -1,0 +1,49 @@
+{
+  "application": {
+    "name": "Windows Troubleshooting Toolkit",
+    "version": "1.0.0",
+    "build": "2026.10",
+    "author": "Antigravity Engineering",
+    "compatibleOs": ["Windows 10", "Windows 11", "Windows Server 2016+"]
+  },
+  "paths": {
+    "logsDirectory": "logs",
+    "reportsDirectory": "reports",
+    "tempDirectory": "temp"
+  },
+  "logging": {
+    "level": "INFO",
+    "maxLogRetentionDays": 30,
+    "encoding": "UTF8",
+    "logToConsole": true
+  },
+  "network": {
+    "pingTargets": [
+      { "name": "Google DNS", "host": "8.8.8.8" },
+      { "name": "Cloudflare DNS", "host": "1.1.1.1" },
+      { "name": "Quad9 DNS", "host": "9.9.9.9" }
+    ],
+    "dnsLookupDomains": [
+      "microsoft.com",
+      "google.com",
+      "cloudflare.com"
+    ],
+    "pingCount": 4,
+    "timeoutMs": 2000
+  },
+  "safety": {
+    "requireConfirmation": true,
+    "dryRunMode": false,
+    "allowUnattendedRepairs": false,
+    "maxEventLogEntries": 50
+  },
+  "ui": {
+    "titlePrefix": "[WTT]",
+    "defaultColor": "Gray",
+    "highlightColor": "Cyan",
+    "successColor": "Green",
+    "warningColor": "Yellow",
+    "errorColor": "Red"
+  }
+}
+
